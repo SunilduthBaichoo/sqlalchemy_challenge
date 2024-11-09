@@ -42,15 +42,14 @@ app = Flask(__name__)
 def home():
     """List all available API routes."""
     return (
-        f"Welcome to the Climate API."
-        f"Copy and paste the respective path to complete the URL"
-        f" Date format : yyyy-mm-dd <br/>"
-        f"/api/v1.0/precipitation <br/>"
-        f"/api/v1.0/stations<br/>"
-        f"/api/v1.0/tobs<br/>"
-        f"/api/v1.0/&lt;start&gt;<br/>"
-        f"/api/v1.0/&lt;start&gt;/&lt;end&gt;<br/>"
-        
+        "<h1>Welcome to the Climate API</h1>"
+        "<ul>"
+        "<li><a href='/api/v1.0/precipitation'>/api/v1.0/precipitation</a> - Precipitation data</li>"
+        "<li><a href='/api/v1.0/stations'>/api/v1.0/stations</a> - List of weather stations</li>"
+        "<li><a href='/api/v1.0/tobs'>/api/v1.0/tobs</a> - Temperature observations for the last year</li>"
+        "<li><a href='/api/v1.0/start_date'>/api/v1.0/&lt;start&gt;</a> - Temp stats from the start date</li>"
+        "<li><a href='/api/v1.0/start_date/end_date'>/api/v1.0/&lt;start&gt;/&lt;end&gt;</a> - Temp stats for date range</li>"
+        "</ul>"
     )
 
 # Route for precipitation data
